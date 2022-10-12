@@ -36,7 +36,30 @@ write tests to handle edge cases.
 
 #1
 def get_friends_favorite_candy_count(favorites):
-    pass
+    candie_dict = {}
+    count = 1
+
+    friend_favorites = [
+    ["Sally", ["lollipop", "bubble gum", "laffy taffy" ]],
+    ["Bob", ["milky way", "licorice", "lollipop" ]],
+    ["Arlene", ["chocolate bar", "milky way", "laffy taffy" ]],
+    ["Carlie", ["nerds", "sour patch kids", "laffy taffy" ]]
+]
+
+    favorite_candies = friend_favorites[1]
+
+    for i in range(len(friend_favorites)):
+        for candie in favorite_candies:
+            if candie in candie_dict:
+                candie_dict["candie"] =  count + 1
+            else:
+                candie_dict["candie"] = 1
+
+
+    # return a dictionary of candy names and the amount of times each candy appears in the `friend_favorites` list.
+    print(f"candie: candie count - {candie_dict}")
+    return candie_dict
+
 
 #2
 def create_new_candy_data_structure(data):
