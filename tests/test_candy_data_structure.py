@@ -1,7 +1,7 @@
 import pytest
 from candy_problem.main import * 
 
-
+# @pytest.mark.skip
 def test_get_friends_favorite_candy_count():
     # Arrange
     friend_favorites = [
@@ -12,19 +12,21 @@ def test_get_friends_favorite_candy_count():
     ]
 
     # Act
-    candy_dict = get_friends_favorite_candy_count(friend_favorites)
+    result = get_friends_favorite_candy_count(friend_favorites)
     
-
     # Assert
-    assert len(candy_dict) == 4
-    assert "lollipop" in candy_dict.keys()
-    assert candy_dict["lollipop"] == 2
-    assert candy_dict["laffy taffy"] == 3
+    assert len(result) == 8
+    assert result["lollipop"] == 2
+    assert result["laffy taffy"] == 3
+    assert result["bubble gum"] == 1
+    assert result["milky way"] == 2
+    assert result["licorice"] == 1
+    assert result["chocolate bar"] == 1
+    assert result["nerds"] == 1
+    assert result["sour patch kids"] == 1
 
-    
 
-
-
+# @pytest.mark.skip
 def test_create_candy_data_structure_type():
     # Arrange
     friend_favorites = [
@@ -41,6 +43,7 @@ def test_create_candy_data_structure_type():
     assert type(new_candy_data) == dict
     
 
+@pytest.mark.skip
 def test_create_candy_data_structure_values():
 
     # Arrange
