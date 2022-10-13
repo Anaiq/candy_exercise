@@ -67,6 +67,7 @@ def get_friends_who_like_specific_candy(favorites, candy_name):
 #4
 def create_candy_set(favorites):
     candy_set = set() #this gets a collection of the UNIQUE candy without duplicates
+    
 
     for friends in favorites:
         for candy in friends[1]:
@@ -74,10 +75,9 @@ def create_candy_set(favorites):
 
     print(f"candy set- {candy_set}\n")
     return candy_set
+    
 
-
-
-# get_friends_favorite_candy_count(friend_favorites)
-# create_new_candy_data_structure(friend_favorites)
-# get_friends_who_like_specific_candy(friend_favorites, candy_name)
+get_friends_favorite_candy_count(friend_favorites)
+create_new_candy_data_structure(friend_favorites)
+get_friends_who_like_specific_candy(friend_favorites, candy_name)
 create_candy_set(friend_favorites)

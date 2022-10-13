@@ -127,7 +127,7 @@ def test_create_candy_set_values():
     # Assert
     assert (len(candy_set) == 8)
     assert set([
-        "lolliop",
+        "lollipop",
         "bubble gum",
         "laffy taffy",
         "milky way",
